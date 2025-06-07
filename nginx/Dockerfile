@@ -1,0 +1,1 @@
+FROM jwilder/nginx-proxy:1.7.1-alpine
