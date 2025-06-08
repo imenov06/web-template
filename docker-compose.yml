@@ -35,7 +35,7 @@ services:
       - nginx
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock:ro
-      - acme:/ect/acme.sh
+      - acme:/etc/acme.sh
 
 volumes:
   certs:
