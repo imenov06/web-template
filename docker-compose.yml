@@ -1,4 +1,4 @@
-version: '3.8'
+version: '2'
 
 services:
   web:
@@ -6,7 +6,6 @@ services:
       context: ./web
       dockerfile: ./Dockerfile
     container_name: web
-    restart: always
     env_file:
       - .env
     environment:
@@ -14,43 +13,29 @@ services:
       - LETSENCRYPT_HOST=${ALLOWED_HOST}
     volumes:
       - ./web/src:/web/src
-    healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:8000"]
-      interval: 30s
-      timeout: 10s
-      retries: 3
-
+    ports:
+      - "8000:8000"
   nginx:
     build:
       context: ./nginx
       dockerfile: ./Dockerfile
     container_name: nginx
-    restart: always
-    ports:
-      - "80:80"
-      - "443:443"
-    volumes:
-      - certs:/etc/nginx/certs:ro
-      - vhost:/etc/nginx/vhost.d
-      - html:/usr/share/nginx/html
-      - /var/run/docker.sock:/tmp/docker.sock:ro
-    depends_on:
-      web:
-        condition: service_healthy
-
-  acme-companion:
-    image: nginxproxy/acme-companion:2.6
-    container_name: acme-companion
-    restart: always
     volumes:
       - certs:/etc/nginx/certs
       - vhost:/etc/nginx/vhost.d
       - html:/usr/share/nginx/html
-      - acme:/etc/acme.sh
+      - /var/run/docker.sock:/tmp/docker.sock:ro
+    ports:
+      - "80:80"
+      - "443:443"
+  acme_companion:
+    image: nginxproxy/acme-companion:2.6
+    container_name: acme-companion
+    volumes_from:
+      - nginx
+    volumes:
       - /var/run/docker.sock:/var/run/docker.sock:ro
-    depends_on:
-      nginx:
-        condition: service_started
+      - acme:/etc/acme.sh
 
 volumes:
   certs:
