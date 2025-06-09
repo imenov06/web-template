@@ -30,6 +30,8 @@ services:
       context: ./nginx
       dockerfile: ./Dockerfile
     container_name: nginx
+    labels:
+      - "com.github.nginx-proxy.nginx=true"
     volumes:
       - certs_volume:/etc/nginx/certs
       - vhost_volume:/etc/nginx/vhost.d
@@ -55,6 +57,7 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock:ro
     environment:
       - DEFAULT_EMAIL=${LETSENCRYPT_EMAIL}
+      - NGINX_PROXY_CONTAINER=nginx
     networks:
       - app_network
     depends_on:
