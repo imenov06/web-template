@@ -3,7 +3,7 @@ from aiogram import Bot, Dispatcher, enums
 from aiogram.client.default import DefaultBotProperties
 # from aiogram.fsm.storage.memory import MemoryStorage # Если понадобится FSM
 
-from web.src.core.config import settings
+from src.core.config import settings
 # Импорты хэндлеров будут здесь, когда мы их создадим
 from src.bot.handlers.user.message import router
 
