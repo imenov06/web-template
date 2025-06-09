@@ -18,6 +18,8 @@ services:
       - REDIS_PASSWORD=${REDIS_PASSWORD}
     volumes:
       - ./web/src:/web/src
+      - ./alembic:/web/alembic
+      - ./alembic.ini:/web/alembic.ini
     networks:
       - app_network
     depends_on:
