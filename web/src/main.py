@@ -12,6 +12,7 @@ from src.core.config import settings
 from src.bot.main_bot import bot, dp, on_startup_webhook, on_shutdown_webhook
 
 from src.bot import webhook_router
+from src.core.middlewares import ProxyMiddleware
 from src.services.initial_data import create_first_user
 
 from src.web_pages.routers_user.index import router as index_router
@@ -53,10 +54,8 @@ app = FastAPI(
     lifespan=lifespan
 )
 
-app.add_middleware(
-    SessionMiddleware,
-    secret_key=settings.ADMIN_SECRET_KEY,
-)
+app.add_middleware(SessionMiddleware,secret_key=settings.ADMIN_SECRET_KEY,)
+app.add_middleware(ProxyMiddleware)
 
 app.state.bot = bot
 app.state.dp = dp

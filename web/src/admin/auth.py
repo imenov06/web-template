@@ -2,7 +2,7 @@ from sqladmin.authentication import AuthenticationBackend
 from starlette.requests import Request
 
 from src.core.config import settings
-from src.db.sessions import get_async_session
+from src.db.sessions import async_session_factory
 from src.repositories.admin_user import repository_admin_user
 
 
@@ -14,7 +14,7 @@ class AdminAuth(AuthenticationBackend):
         form = await request.form()
         username, password = form["username"], form["password"]
 
-        async with get_async_session() as db:
+        async with async_session_factory() as db:
             user = await repository_admin_user.authenticate(
                 db=db, username=username, password=password
             )
