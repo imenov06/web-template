@@ -1,5 +1,5 @@
 from src.core.config import settings
-from src.db.sessions import get_async_session
+from src.db.sessions import async_session_factory
 from src.repositories.admin_user import repository_admin_user
 from src.repositories.role import repository_role
 from src.schemas.admin_user import AdminUserCreate
@@ -10,7 +10,7 @@ async def create_first_user() -> None:
     """
     Основная асинхронная функция для инициализации данных.
     """
-    async with get_async_session() as db:
+    async with async_session_factory() as db:
 
         # --- 1. Создание роли администратора ---
         admin_role_name = "Главный администратор"
