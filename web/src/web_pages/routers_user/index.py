@@ -3,7 +3,6 @@ from fastapi import APIRouter, Request
 from src.core.templates import templates
 
 router = APIRouter(
-    prefix="/",
     tags=["Index page"],
 )
 
