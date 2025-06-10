@@ -27,6 +27,11 @@ class Settings(BaseSettings):
     ALLOWED_HOST: str | None
     LETSENCRYPT_EMAIL: str | None
 
+    # --- FastApi ---
+    ADMIN_SECRET_KEY: str
+    FIRST_SUPERUSER_LOGIN: str
+    FIRST_SUPERUSER_PASSWORD:str
+
     @computed_field
     @property
     def WEBHOOK_URL(self) -> str:
