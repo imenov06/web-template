@@ -55,7 +55,7 @@ app = FastAPI(
 
 app.add_middleware(
     SessionMiddleware,
-    secret_key=settings.SECRET_KEY,
+    secret_key=settings.ADMIN_SECRET_KEY,
 )
 
 app.state.bot = bot
