@@ -37,4 +37,3 @@ async def create_first_user() -> None:
             user = await repository_admin_user.create(db, obj_in=user_in)
 
 
-    print("--- Initial data creation finished ---")

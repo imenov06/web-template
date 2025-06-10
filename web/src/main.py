@@ -6,7 +6,7 @@ from starlette.middleware.sessions import SessionMiddleware
 from starlette.staticfiles import StaticFiles
 from starlette.templating import Jinja2Templates
 
-from src.admin.service import admin
+from src.admin.service import admin, init_admin
 from src.core.config import settings
 
 from src.bot.main_bot import bot, dp, on_startup_webhook, on_shutdown_webhook
@@ -32,6 +32,8 @@ async def lifespan(app: FastAPI):
     logger.info("Application startup...")
     try:
         await on_startup_webhook()
+        await create_first_user()
+        logger.info("Initial data check complete.")
     except Exception as e:
         logger.critical(f"CRITICAL: Webhook setup failed during startup: {e}", exc_info=True)
 
@@ -56,14 +58,12 @@ app.add_middleware(
     secret_key=settings.SECRET_KEY,
 )
 
-admin.mount_to(app)
-
 app.state.bot = bot
 app.state.dp = dp
 
 app.mount("/static", StaticFiles(directory="src/static"), name="static")
 templates = Jinja2Templates(directory="src/templates")
+init_admin(app=app)
 
-asyncio.run(create_first_user())
 app.include_router(webhook_router.router)
 app.include_router(index_router)
