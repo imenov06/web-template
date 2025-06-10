@@ -1,6 +1,6 @@
 from fastapi import APIRouter, Request
 
-from src.main import templates
+from src.core.templates import templates
 
 router = APIRouter(
     prefix="/",

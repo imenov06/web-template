@@ -6,7 +6,7 @@ from starlette.middleware.sessions import SessionMiddleware
 from starlette.staticfiles import StaticFiles
 from starlette.templating import Jinja2Templates
 
-from src.admin.service import admin, init_admin
+from src.admin.service import init_admin
 from src.core.config import settings
 
 from src.bot.main_bot import bot, dp, on_startup_webhook, on_shutdown_webhook
@@ -62,7 +62,6 @@ app.state.bot = bot
 app.state.dp = dp
 
 app.mount("/static", StaticFiles(directory="src/static"), name="static")
-templates = Jinja2Templates(directory="src/templates")
 init_admin(app=app)
 
 app.include_router(webhook_router.router)
