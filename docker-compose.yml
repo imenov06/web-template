@@ -37,6 +37,7 @@ services:
     volumes:
       - certs_volume:/etc/nginx/certs
       - vhost_volume:/etc/nginx/vhost.d
+      - ./nginx/default_location:/etc/nginx/vhost.d/default:ro
       - html_volume:/usr/share/nginx/html
       - /var/run/docker.sock:/tmp/docker.sock:ro
       - ./web/src/static:/web/src/static:ro
