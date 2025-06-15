@@ -1,0 +1,727 @@
+:root {
+    --bg-white: #ffffff;
+    --bg-ultra-light: #fdfdfd;
+    --bg-light-gray: #f9f9f9;
+    --bg-dark: #181818;
+
+    --text-dark: #121212;
+    --text-medium: #555555;
+    --text-light: #777777;
+    --text-on-dark: #e8e8e8;
+
+    --accent-pink: #E8B4C8;
+    --accent-pink-darker: #D8A0B8;
+    --accent-pink-lightest: #FDF6F8;
+
+
+    --border-color: #e0e0e0;
+    --brand-primary-black: #000000;
+    --brand-secondary-black: #222222;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    scroll-behavior: smooth;
+    background-color: var(--bg-white);
+    color: var(--text-dark);
+    line-height: 1.8;
+}
+h1, h2, h3, h4, h5, h6, .navbar-brand, .btn, .display-1, .display-2, .display-3, .display-4, .display-5, .display-6 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+.font-display { font-family: 'Playfair Display', serif; font-weight: 800; }
+
+/* Header */
+.navbar {
+    background-color: rgba(255, 255, 255, 0.97);
+    backdrop-filter: blur(15px);
+    padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+}
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--brand-primary-black) !important;
+    letter-spacing: -0.1px;
+}
+.nav-link {
+    color: var(--text-medium) !important;
+    font-weight: 500;
+    padding: 0.4rem 0.9rem !important;
+    transition: color 0.25s ease;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+}
+.nav-link:hover, .nav-link.active {
+    color: var(--accent-pink-darker) !important;
+}
+.navbar-toggler {
+    border: none;
+    padding: 0.15rem 0.35rem;
+    color: var(--brand-primary-black);
+    font-size: 1.4rem;
+}
+.navbar-toggler:focus { box-shadow: none; }
+.navbar-toggler-icon-custom { font-size: 1.6rem; line-height: 1; }
+.navbar-toggler .bi-list { display: block; }
+.navbar-toggler .bi-x-lg { display: none; }
+.navbar-toggler[aria-expanded="true"] .bi-list { display: none; }
+.navbar-toggler[aria-expanded="true"] .bi-x-lg { display: block; }
+
+/* --- Стили для кнопки "Записаться" в Навбаре (из tech_tela_css_v6_button_fix) --- */
+.navbar .btn-cta-nav-unique {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    background-color: var(--accent-pink-darker);
+    color: var(--bg-white);
+    border: 1px solid var(--accent-pink-darker);
+    padding: 0.45rem 1.1rem;
+    border-radius: 30px;
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.navbar .btn-cta-nav-unique .btn-text-inner {
+    position: relative;
+    z-index: 2;
+}
+
+.navbar .btn-cta-nav-unique:hover {
+    background-color: var(--accent-pink);
+    border-color: var(--accent-pink);
+    color: var(--bg-white);
+    box-shadow: 0 2px 8px rgba(216, 160, 184, 0.25);
+    transform: translateY(-1px);
+}
+
+
+/* Hero Section */
+.hero-section {
+    min-height: 100vh;
+    padding-top: 90px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    background-color: var(--bg-ultra-light);
+}
+ .hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-image:
+        linear-gradient(25deg, rgba(232, 180, 200, 0.02) 1px, transparent 1px),
+        linear-gradient(-65deg, rgba(232, 180, 200, 0.02) 1px, transparent 1px);
+    background-size: 28px 28px;
+    opacity: 0.6;
+    z-index: 0;
+}
+.hero-content-wrapper { position: relative; z-index: 1; }
+.hero-title {
+    font-size: calc(1.7rem + 3.3vw);
+    line-height: 1.18;
+    color: var(--text-dark);
+}
+.hero-subtitle {
+    font-size: calc(0.82rem + 0.55vw);
+    color: var(--text-medium);
+    font-weight: 300;
+    max-width: 640px;
+}
+.hero-pills span {
+    background-color: rgba(232, 180, 200, 0.08);
+    border: 1px solid rgba(232, 180, 200, 0.15);
+    padding: 0.45rem 0.95rem;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--text-dark);
+}
+.hero-pills .bi { font-size: 0.8rem; margin-right: 0.3rem; color: var(--accent-pink-darker); }
+.hero-image {
+    border-radius: 0.7rem;
+    box-shadow: 0 18px 40px -20px rgba(0,0,0,0.1);
+}
+
+/* --- ОБЩИЕ СТИЛИ ДЛЯ КАСТОМНЫХ КНОПОK --- */
+.btn-custom {
+    padding: 0.75rem 1.9rem;
+    font-weight: 600;
+    border-radius: 5px; /* Можно увеличить для "мягкости", например 8px или 50px для "пилюль" */
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    position: relative;
+    overflow: hidden; /* Важно для эффекта растущего круга */
+    z-index: 1;
+    border-width: 2px;
+    border-style: solid;
+    box-shadow: 0 2px 7px rgba(0,0,0,0.03);
+    /* Очень плавные переходы */
+    transition:
+        background-color 0.45s cubic-bezier(0.65, 0, 0.35, 1),
+        border-color 0.45s cubic-bezier(0.65, 0, 0.35, 1),
+        color 0.45s cubic-bezier(0.65, 0, 0.35, 1),
+        transform 0.35s cubic-bezier(0.165, 0.84, 0.44, 1), /* Быстрый, но плавный сдвиг */
+        box-shadow 0.45s cubic-bezier(0.65, 0, 0.35, 1);
+    cursor: pointer;
+}
+
+.btn-custom .btn-text,
+.btn-custom .btn-icon {
+    position: relative;
+    z-index: 2; /* Текст и иконка поверх ::before */
+    transition: color 0.45s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+.btn-custom .btn-icon {
+    margin-left: 0.35rem;
+    font-size: 1.05em;
+    transition:
+        transform 0.35s cubic-bezier(0.165, 0.84, 0.44, 1),
+        color 0.45s cubic-bezier(0.65, 0, 0.35, 1);
+}
+.btn-custom:hover .btn-icon {
+    transform: translateX(4px); /* Чуть больше сдвиг для заметности */
+}
+
+/* Псевдоэлемент ::before будет использоваться для разных эффектов */
+.btn-custom::before {
+    content: '';
+    position: absolute;
+    z-index: 1; /* Позади текста, но может быть поверх основного фона кнопки */
+}
+
+/* --- Основная кнопка (Розовый фон, белый текст) - Эффект "Растущий круг" --- */
+.btn-custom-primary {
+    background-color: var(--accent-pink-darker);
+    border-color: var(--accent-pink-darker);
+    color: var(--bg-white);
+}
+.btn-custom-primary .btn-text,
+.btn-custom-primary .btn-icon {
+    color: var(--bg-white);
+}
+
+.btn-custom-primary::before {
+    /* Стиль для "растущего круга" */
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background-color: var(--accent-pink); /* Цвет круга (светлее) */
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.45s cubic-bezier(0.65, 0, 0.35, 1), height 0.45s cubic-bezier(0.65, 0, 0.35, 1), opacity 0.45s ease-out;
+    opacity: 0; /* Изначально невидимый */
+}
+
+.btn-custom-primary:hover {
+    /* Основной фон кнопки не меняем, круг его перекроет */
+    /* border-color: var(--accent-pink); - можно оставить таким же или сделать в цвет круга */
+    transform: translateY(-3px) scale(1.01); /* Более выразительный подъем и легкое увеличение */
+    box-shadow: 0 5px 15px rgba(216, 160, 184, 0.35);
+}
+
+.btn-custom-primary:hover::before {
+    /* Круг вырастает до размера, перекрывающего кнопку.
+       Можно использовать 'max(width, height)' кнопки через JS,
+       но для простоты CSS возьмем большое значение. */
+    width: 250%; /* Должно быть достаточно для большинства кнопок */
+    padding-top: 250%; /* Сохраняем круглую форму через padding-top, если width/height не одинаковы */
+    opacity: 1;
+}
+
+/* Цвет текста меняется, когда круг уже почти заполнил кнопку */
+.btn-custom-primary:hover .btn-text,
+.btn-custom-primary:hover .btn-icon {
+    color: var(--accent-pink-darker); /* Текст становится темнее на светлом фоне круга */
+    transition-delay: 0.1s; /* Небольшая задержка для смены цвета текста */
+}
+
+
+/* --- Контурная кнопка (Прозрачный фон, розовая рамка и текст) --- */
+/* Эффект "заливки снизу вверх" для outline */
+.btn-custom-outline {
+    background-color: transparent;
+    border-color: var(--accent-pink-darker);
+    color: var(--accent-pink-darker);
+}
+.btn-custom-outline .btn-text,
+.btn-custom-outline .btn-icon {
+    color: var(--accent-pink-darker);
+}
+
+.btn-custom-outline::before {
+    top: 100%; /* Начинается снизу */
+    left: 0;
+    width: 100%;
+    height: 0%; /* Изначально нулевая высота */
+    background-color: var(--accent-pink-darker);
+    transition: height 0.45s cubic-bezier(0.65, 0, 0.35, 1), top 0.45s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+.btn-custom-outline:hover {
+    /* border-color: var(--accent-pink-darker); - можно не менять, если заливка того же цвета */
+    /* color изменится для .btn-text и .btn-icon ниже */
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(216, 160, 184, 0.25);
+}
+
+.btn-custom-outline:hover::before {
+    height: 100%;
+    top: 0; /* Поднимается вверх */
+}
+.btn-custom-outline:hover .btn-text,
+.btn-custom-outline:hover .btn-icon {
+    color: var(--bg-white);
+}
+
+
+/* --- Контурная светлая кнопка (для темного фона) --- */
+/* Эффект "заливки снизу вверх" */
+.btn-custom-outline-light {
+    background-color: transparent;
+    border-color: var(--bg-white);
+    color: var(--bg-white);
+}
+.btn-custom-outline-light .btn-text,
+.btn-custom-outline-light .btn-icon {
+    color: var(--bg-white);
+}
+
+.btn-custom-outline-light::before {
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background-color: var(--bg-white);
+    transition: height 0.45s cubic-bezier(0.65, 0, 0.35, 1), top 0.45s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+.btn-custom-outline-light:hover {
+    /* border-color: var(--bg-white); */
+    /* color изменится для .btn-text и .btn-icon ниже */
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+}
+
+.btn-custom-outline-light:hover::before {
+    height: 100%;
+    top: 0;
+}
+.btn-custom-outline-light:hover .btn-text,
+.btn-custom-outline-light:hover .btn-icon {
+    color: var(--accent-pink-darker); /* Текст становится темным на светлом фоне заливки */
+}
+@media (max-width: 767.98px) {
+    .hero-section .buttons-hero .btn-custom {
+        display: block;
+        width: 100%;
+        max-width: 270px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+     .hero-section .buttons-hero .btn-custom:first-child {
+        margin-bottom: 0.6rem;
+    }
+}
+
+
+/* Cards - More Unique & Airy */
+.service-card {
+    background-color: var(--bg-white);
+    border-radius: 0.5rem;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.025);
+    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+    border: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.service-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(216, 160, 184, 0.06);
+}
+.service-card-img-wrapper {
+    height: 230px;
+    overflow: hidden;
+    position: relative;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+}
+.service-card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), filter 0.2s ease;
+}
+.service-card:hover .service-card-img {
+    transform: scale(1.04);
+    filter: brightness(0.99);
+}
+.service-card .card-body {
+    padding: 1.3rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+.service-card .card-title {
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin-bottom: 0.4rem;
+    color: var(--text-dark);
+}
+.service-card .card-subtitle-text {
+    color: var(--accent-pink-darker);
+    font-size: 0.72rem;
+    display: block;
+    margin-bottom: 0.7rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+.service-card .card-text-main {
+     color: var(--text-secondary);
+     font-weight: 400;
+     margin-bottom: 1.2rem;
+     font-size: 0.85rem;
+}
+.service-card .btn { margin-top: auto; font-size: 0.7rem; padding: 0.6rem 1.6rem;}
+
+/* Section Styling */
+.section-padding { padding-top: 4.5rem; padding-bottom: 4.5rem; }
+.section-bg-ultra-light { background-color: var(--bg-ultra-light); }
+.section-bg-light-pink { background-color: var(--accent-pink-lightest); }
+.section-bg-dark { background-color: var(--text-dark); color: var(--bg-primary); }
+.section-bg-dark a { color: #f0d8e2;  }
+.section-bg-dark a:hover { color: var(--bg-white); }
+.section-title { font-weight: 700; margin-bottom: 1rem; color: var(--text-dark); }
+.section-subtitle { font-size: 1.05rem; color: var(--text-secondary); margin-bottom: 2.8rem; max-width: 660px; margin-left: auto; margin-right: auto; font-weight: 300; line-height: 1.65;}
+
+/* Problem/Solution Icons */
+#problem-solution .icon-problem { /* Класс для иконок в этом блоке */
+    color: var(--accent-pink-darker);
+}
+
+/* Testimonials */
+.testimonial-card {
+    background-color: var(--bg-white);
+    border-radius: 0.5rem;
+    padding: 1.6rem;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.015);
+}
+.testimonial-img {
+    width: 55px;
+    height: 55px;
+    border: 2px solid var(--bg-white);
+    box-shadow: 0 0 7px rgba(0,0,0,0.025);
+}
+.testimonial-card .card-text { font-size: 0.9rem; color: var(--text-dark); line-height: 1.6; }
+.testimonial-card .fw-semibold { color: var(--accent-pink-darker); font-size: 0.85rem; }
+
+
+/* Process Steps - More Airy */
+.process-step { text-align: center; }
+.process-step .step-icon-wrapper {
+    width: 60px;
+    height: 60px;
+    background-color: var(--bg-white);
+    color: var(--accent-pink);
+    font-size: 1.4rem;
+    font-weight: 600;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 0.9rem auto;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+    border: 1px solid var(--border-color-light);
+    transition: all 0.25s ease;
+}
+.process-step:hover .step-icon-wrapper {
+    background-color: var(--accent-pink);
+    color: var(--bg-white);
+    transform: scale(1.04) rotate(2deg);
+}
+.process-step h4 { font-weight: 600; font-size: 1rem; margin-bottom: 0.25rem; }
+.process-step p { font-size: 0.8rem; color: var(--text-secondary); }
+
+/* Pricing Cards */
+.pricing-card {
+    border: 1px solid var(--border-color-light);
+    border-radius: 0.5rem;
+    background-color: var(--bg-white);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.01);
+    transition: all 0.3s ease;
+}
+.pricing-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 7px 22px rgba(216, 160, 184, 0.05);
+}
+.pricing-card .card-header {
+    background-color: var(--accent-pink-lightest);
+    border-bottom: 1px solid var(--border-color-light);
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    padding: 1.1rem 1.5rem;
+}
+.pricing-card .card-header h3 { font-size: 1.4rem; font-weight: 600; color: var(--text-primary); }
+.pricing-card .list-unstyled li { padding: 0.45rem 0; border-bottom: 1px solid #fdf6f4; font-size: 0.85rem; }
+.pricing-card .list-unstyled li:last-child { border-bottom: none; }
+.pricing-card .price-highlight { color: var(--accent-pink-darker); font-weight: 600; font-size: 1em; }
+.pricing-card .price-original { text-decoration: line-through; color: #a0928b; }
+
+/* Accordion (FAQ) */
+.faq-section .accordion-item {
+    background-color: var(--bg-white);
+    border: 1px solid var(--border-color-light);
+    border-radius: 0.5rem;
+    margin-bottom: 0.75rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.01);
+}
+.faq-section .accordion-button {
+    font-weight: 500;
+    font-size: 1.05rem;
+    color: var(--text-primary);
+    background-color: var(--bg-white);
+    padding: 1.1rem 1.25rem;
+    text-align: left;
+}
+.faq-section .accordion-button:not(.collapsed) {
+    color: var(--accent-pink-darker);
+    background-color: var(--accent-pink-lightest);
+    box-shadow: inset 0 -1px 0 rgba(216, 160, 184, .1);
+}
+.faq-section .accordion-button:focus { box-shadow: 0 0 0 0.2rem rgba(216, 160, 184,.15); border-color: transparent; }
+.faq-section .accordion-button::after {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%233D3D3D'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+    transition: transform .2s ease-in-out;
+}
+ .faq-section .accordion-button:not(.collapsed)::after {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23D8A0B8'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+    transform: rotate(-180deg);
+}
+.faq-section .accordion-body { padding: 1.1rem 1.25rem; background-color: var(--bg-white); border-top: 1px solid var(--border-color-light); font-size: 0.9rem; color: var(--text-medium); }
+
+
+/* Contact Form */
+.contact-form-section { background-color: var(--text-dark); }
+.contact-form-section .form-control,
+.contact-form-section .form-select {
+    background-color: rgba(255,251,247,0.07);
+    border-color: rgba(247,234,231,0.15);
+    color: var(--bg-primary);
+    padding: 0.8rem 1rem;
+    border-radius: 0.3rem;
+    font-size: 0.88rem;
+}
+.contact-form-section .form-control::placeholder { color: rgba(255,251,247,0.55); }
+.contact-form-section .form-control:focus,
+.contact-form-section .form-select:focus {
+    background-color: rgba(255,251,247,0.1);
+    border-color: rgba(247,234,231,0.35);
+    color: var(--bg-white);
+    box-shadow: 0 0 0 0.25rem rgba(232, 180, 200,.2);
+}
+.contact-form-section .form-select option {
+    background-color: var(--text-dark);
+    color: var(--bg-primary);
+}
+.contact-form-section .form-check-input {
+    background-color: rgba(255,251,247,0.07);
+    border-color: rgba(247,234,231,0.15);
+}
+.contact-form-section .form-check-input:checked {
+    background-color: var(--accent-pink-darker);
+    border-color: var(--accent-pink-darker);
+}
+.contact-form-section .form-check-label {
+    font-size: 0.8rem;
+    color: rgba(255,251,247,0.75);
+}
+.contact-form-section .form-check-label a {
+    color: rgba(255,251,247,0.85);
+    text-decoration: underline;
+}
+.contact-form-section .form-check-label a:hover {
+    color: var(--bg-white);
+}
+
+
+.contact-icons a {
+    color: rgba(255,251,247,0.65);
+    font-size: 1.6rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+.contact-icons a:hover { color: var(--bg-white); transform: scale(1.1); }
+
+
+/* Footer */
+.footer { background-color: var(--brand-primary-black); color: rgba(255,251,247,0.55); padding: 2.8rem 0; border-top: 1px solid rgba(247,234,231,0.08); }
+.footer a { color: rgba(255,251,247,0.75); text-decoration: none; }
+.footer a:hover { color: var(--bg-white); }
+.footer .list-inline-item:not(:last-child) { margin-right: 0.9rem; }
+.footer small { font-size: 0.78rem; }
+
+/* Fixed CTA Button - Creative & Less Intrusive */
+.btn-fixed-cta {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1030;
+    background-color: var(--accent-pink-darker);
+    color: var(--bg-white);
+    border: none;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    font-family: 'Montserrat', sans-serif;
+    box-shadow: 0 4px 14px rgba(216, 160, 184, 0.2);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transform: translateY(8px) scale(0.92);
+    cursor: pointer;
+}
+.btn-fixed-cta .cta-icon {
+    font-size: 1.15rem;
+    transition: transform 0.3s ease;
+    color: var(--bg-white);
+}
+.btn-fixed-cta .cta-text-tooltip {
+    position: absolute;
+    white-space: nowrap;
+    left: 50%;
+    bottom: calc(100% + 8px);
+    transform: translateX(-50%) translateY(6px);
+    background-color: var(--text-dark);
+    color: var(--bg-primary);
+    padding: 0.3rem 0.65rem;
+    border-radius: 4px;
+    font-size: 0.68rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease-out, transform 0.2s ease-out, visibility 0.2s;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    pointer-events: none;
+}
+
+.btn-fixed-cta.show {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+.btn-fixed-cta:hover {
+    background-color: var(--accent-pink);
+    transform: translateY(-2px) scale(1.03);
+    box-shadow: 0 7px 20px rgba(216, 160, 184, 0.28);
+}
+ .btn-fixed-cta:hover .cta-icon {
+    transform: rotate(5deg) scale(1.05);
+}
+@media (min-width: 992px) {
+    .btn-fixed-cta:hover .cta-text-tooltip {
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(-50%) translateY(0);
+    }
+}
+@media (max-width: 991.98px) {
+     .btn-fixed-cta .cta-text-tooltip { display: none; }
+}
+
+
+/* Decorative Dividers - Subtle */
+.divider-subtle {
+    width: 40px;
+    height: 1px;
+    background-color: var(--border-color);
+    margin: 2.5rem auto;
+}
+
+#preloader {
+    position: fixed; /* Фиксированное положение на весь экран */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg-white); /* Цвет фона прелоадера, можно использовать ваш --bg-ultra-light */
+    z-index: 9999; /* Очень высокий z-index, чтобы быть поверх всего */
+    display: flex;
+    align-items: center; /* Вертикальное центрирование спиннера */
+    justify-content: center; /* Горизонтальное центрирование спиннера */
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.7s ease-out, visibility 0.7s ease-out; /* Плавное исчезновение */
+}
+
+/* Класс для скрытия прелоадера */
+#preloader.hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none; /* Чтобы не мешал взаимодействию со страницей после скрытия */
+}
+
+/* Стили для самого спиннера Bootstrap внутри прелоадера */
+#preloader .spinner-border {
+    width: 3.5rem; /* Размер спиннера */
+    height: 3.5rem; /* Размер спиннера */
+    color: var(--accent-pink-darker); /* Цвет спиннера, используем ваш фирменный розовый */
+    border-width: 0.25em; /* Толщина линии спиннера */
+}
+
+
+/* Mobile specific adjustments for airiness */
+@media (max-width: 767.98px) {
+    .hero-section { padding-top: 70px; min-height: auto; padding-bottom: 2.5rem; }
+    .hero-title { font-size: calc(1.35rem + 3.5vw); }
+    .hero-subtitle { font-size: calc(0.75rem + 1vw); }
+    .hero-image-container { display: none !important; }
+    .section-padding { padding-top: 2.5rem; padding-bottom: 2.5rem; }
+    .display-4 { font-size: calc(1.2rem + 2vw); }
+    .display-5 { font-size: calc(1.15rem + 1.7vw); }
+    .display-6 { font-size: calc(1.1rem + 1.1vw); }
+    .service-card .card-title { font-size: 1.05rem; }
+    .process-step .step-icon-wrapper { width: 45px; height: 45px; font-size: 1.1rem; margin-bottom: 0.5rem;}
+    .process-step h4 { font-size: 0.85rem; }
+    .pricing-card .card-header h3 { font-size: 1.15rem; }
+    .faq-section .accordion-button { font-size: 0.85rem; padding: 0.8rem 1rem; }
+    .faq-section .accordion-body { font-size: 0.75rem; padding: 0.8rem 1rem; }
+    .contact-form-section .display-3 { font-size: calc(1.25rem + 2.5vw); }
+    .contact-form-section .fs-4 { font-size: calc(1rem + 0.15vw); }
+    .contact-icons a { font-size: 1.2rem; }
+    .footer { padding: 2rem 0; }
+    .btn-fixed-cta { width: 45px; height: 45px; bottom: 12px; right: 12px;}
+    .btn-fixed-cta .cta-icon { font-size: 1rem; }
+}
+@media (max-width: 576px) {
+    .hero-pills span { font-size: 0.65rem; padding: 0.25rem 0.7rem; }
+    .hero-pills .bi { font-size: 0.65rem; }
+    .btn-custom { padding: 0.55rem 1.5rem; font-size: 0.65rem;}
+    .btn-lg.btn-custom { padding: 0.6rem 1.7rem; font-size: 0.7rem;}
+    .navbar .btn-cta-nav-unique { padding: 0.25rem 0.8rem; font-size: 0.65rem;}
+}
+
+#accordionAboutUnique .accordion-item {
+    --bs-accordion-active-bg: var(--accent-pink);
+    --bs-accordion-btn-focus-box-shadow: 0 0 0 0.1rem rgba(232, 180, 200, 0.5);
+    --bs-accordion-btn-focus-border-color: transparent;
+}

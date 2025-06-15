@@ -1,13 +1,707 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Технология Тела | Массаж и Обучение в Минеральных Водах</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Roboto:wght@300;400;500&family=Montserrat:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+
+
 </head>
 <body>
-<h1>hello</h1>
+
+<nav id="navbar" class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="#hero">Технология Тела</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon-custom">
+                    <i class="bi bi-list"></i>
+                    <i class="bi bi-x-lg"></i>
+                </span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto align-items-lg-center">
+                <li class="nav-item"><a class="nav-link" href="#services">Услуги</a></li>
+                <li class="nav-item"><a class="nav-link" href="#about">О нас</a></li>
+                <li class="nav-item"><a class="nav-link" href="#testimonials">Отзывы</a></li>
+                <li class="nav-item"><a class="nav-link" href="#pricing">Цены</a></li>
+                <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+                <li class="nav-item">
+                    <a class="nav-link btn btn-cta-nav-unique ms-lg-3 mt-3 mt-lg-0" href="#contact">
+                        <span class="btn-text-inner">Записаться</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<main data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="80" tabindex="0">
+
+    <section id="hero" class="hero-section">
+        <div class="container hero-content-wrapper py-5">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-7 text-center text-lg-start">
+                    <h1 class="hero-title font-display mb-4" data-aos="fade-right">Минеральные Воды: Ваша Точка Роста к
+                        Здоровью и Красоте!</h1>
+                    <p class="hero-subtitle mb-5" data-aos="fade-right" data-aos-delay="100">
+                        Профессиональный массаж и обучение от "Технологии Тела". Обретите легкость, стройность и
+                        гармонию с экспертами, имеющими медицинское образование и многолетний опыт.
+                    </p>
+                    <div class="d-flex flex-wrap justify-content-center justify-content-lg-start align-items-center gap-3 mb-5 hero-pills"
+                         data-aos="fade-right" data-aos-delay="200">
+                        <span><i class="bi bi-mortarboard-fill"></i>Мед. образование</span>
+                        <span><i class="bi bi-clock-history"></i>Опыт 3+ года</span>
+                        <span><i class="bi bi-stars"></i>Видимый результат</span>
+                    </div>
+                    <div class="buttons-hero" data-aos="fade-right" data-aos-delay="300">
+                        <a href="#contact" class="btn btn-lg btn-custom btn-custom-primary me-sm-3 mb-3 mb-sm-0">
+                            <span class="btn-text">Записаться на консультацию</span>
+                            <i class="bi bi-arrow-right-short btn-icon"></i>
+                        </a>
+                        <a href="#services" class="btn btn-lg btn-custom btn-custom-outline">
+                            <span class="btn-text">Наши программы</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-5 d-none d-lg-block hero-image-container" data-aos="fade-left" data-aos-delay="200">
+                    <img src="/static/img/webp/start_image.webp" class="hero-image img-fluid" alt="Эстетика Массажа" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="problem-solution" class="section-padding section-bg-ultra-light">
+        <div class="container text-center">
+            <h2 class="display-4 section-title" data-aos="fade-up">Устали от дискомфорта? Ищете решение?</h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
+                Многие сталкиваются с болями, стрессом или недовольством фигурой. "Технология Тела" предлагает
+                эффективные пути к вашему благополучию.
+            </p>
+            <div class="row g-4 justify-content-center">
+                <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="150">
+                    <div class="p-4 bg-white rounded-3 shadow-sm h-100 d-flex flex-column align-items-center">
+                        <i class="bi bi-universal-access-circle fs-1 mb-3"
+                           style="color: var(--accent-pink-darker);"></i>
+                        <h5 class="fw-semibold mb-2">Боли и зажимы</h5>
+                        <p class="small text-secondary">В спине, шее, головные боли от современного ритма жизни?</p>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+                    <div class="p-4 bg-white rounded-3 shadow-sm h-100 d-flex flex-column align-items-center">
+                        <i class="bi bi-person-hearts fs-1 mb-3" style="color: var(--accent-pink-darker);"></i>
+                        <h5 class="fw-semibold mb-2">Здоровье малыша</h5>
+                        <p class="small text-secondary">Беспокойство о тонусе, коликах, нарушениях сна у ребенка?</p>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="250">
+                    <div class="p-4 bg-white rounded-3 shadow-sm h-100 d-flex flex-column align-items-center">
+                        <i class="bi bi-emoji-smile fs-1 mb-3" style="color: var(--accent-pink-darker);"></i>
+                        <h5 class="fw-semibold mb-2">Недовольство фигурой</h5>
+                        <p class="small text-secondary">Целлюлит и безуспешные попытки это исправить?</p>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+                    <div class="p-4 bg-white rounded-3 shadow-sm h-100 d-flex flex-column align-items-center">
+                        <i class="bi bi-journals fs-1 mb-3" style="color: var(--accent-pink-darker);"></i>
+                        <h5 class="fw-semibold mb-2">Новые навыки</h5>
+                        <p class="small text-secondary">Желание освоить массаж для помощи близким или как профессию?</p>
+                    </div>
+                </div>
+            </div>
+            <div class="divider-subtle" data-aos="fade-up" data-aos-delay="350"></div>
+        </div>
+    </section>
+
+    <section id="services" class="section-padding">
+        <div class="container">
+            <h2 class="display-4 section-title text-center" data-aos="fade-up">Наши Программы для Вашего
+                Преображения</h2>
+            <p class="section-subtitle text-center" data-aos="fade-up" data-aos-delay="100">Индивидуальный подход и
+                проверенные методики для достижения лучших результатов.</p>
+
+            <div class="mb-5 pt-4" data-aos="fade-up" data-aos-delay="150">
+                <h3 class="display-6 fw-semibold text-center mb-5">Для Нее: Красота, Энергия и Гармония</h3>
+                <div class="row g-4 g-xl-5 justify-content-center align-items-stretch">
+                    <div class="col-md-6 col-lg-5">
+                        <div class="service-card h-100" data-aos="zoom-in-right" data-aos-delay="200">
+                            <div class="service-card-img-wrapper">
+                                <img src="/static/img/webp/dream_body.webp" class="service-card-img" alt="Скульптурирующий массаж" loading="lazy">
+                            </div>
+                            <div class="card-body">
+                                <h4 class="card-title">Фигура Мечты</h4>
+                                <p class="card-subtitle-text">Скульптурирующий массаж</p>
+                                <p class="card-text-main flex-grow-1">Результат: Минус сантиметры, упругая кожа без
+                                    целлюлита, легкость и уверенность.</p>
+                                <a href="#contact" class="btn btn-custom btn-custom-primary mt-auto"><span
+                                        class="btn-text">Подробнее и запись</span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-5">
+                        <div class="service-card h-100" data-aos="zoom-in-left" data-aos-delay="250">
+                            <div class="service-card-img-wrapper">
+                                <img src="/static/img/webp/source_of_power.webp" class="service-card-img" alt="Оздоровительный массаж" loading="lazy">
+                            </div>
+                            <div class="card-body">
+                                <h4 class="card-title">Источник Сил</h4>
+                                <p class="card-subtitle-text">Оздоровительный массаж</p>
+                                <p class="card-text-main flex-grow-1">Результат: Прощайте, боли и зажимы! Глубокое
+                                    расслабление, прилив сил.</p>
+                                <a href="#contact" class="btn btn-custom btn-custom-primary mt-auto"><span
+                                        class="btn-text">Узнать больше</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="divider-subtle" data-aos="fade-up" data-aos-delay="200"></div>
+            <div class="mb-5 pt-4" data-aos="fade-up" data-aos-delay="200">
+                <h3 class="display-6 fw-semibold text-center mb-5">Для Малышей: Забота и Здоровое Детство</h3>
+                <div class="row g-4 g-xl-5 justify-content-center align-items-stretch">
+                    <div class="col-md-6 col-lg-5">
+                        <div class="service-card h-100" data-aos="zoom-in-right" data-aos-delay="250">
+                            <div class="service-card-img-wrapper">
+                                <img src="/static/img/webp/gold_arm.webp" class="service-card-img" alt="Массаж для грудничков" loading="lazy">
+                            </div>
+                            <div class="card-body">
+                                <h4 class="card-title">Золотые Ручки (0-1 год)</h4>
+                                <p class="card-subtitle-text">Массаж + ЛФК для крох</p>
+                                <p class="card-text-main flex-grow-1">Результат: Спокойный сон малыша, правильное
+                                    развитие, радость материнства.</p>
+                                <a href="#contact" class="btn btn-custom btn-custom-outline mt-auto"><span
+                                        class="btn-text">Записать сокровище!</span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-5">
+                        <div class="service-card h-100" data-aos="zoom-in-left" data-aos-delay="300">
+                            <div class="service-card-img-wrapper">
+                                <img src="/static/img/webp/grow_energy.webp" class="service-card-img" alt="Развивающий массаж для детей" loading="lazy">
+                            </div>
+                            <div class="card-body">
+                                <h4 class="card-title">Энергия Роста (1-7 лет)</h4>
+                                <p class="card-subtitle-text">Развивающий массаж</p>
+                                <p class="card-text-main flex-grow-1">Результат: Крепкий иммунитет, королевская осанка,
+                                    гармоничное развитие!</p>
+                                <a href="#contact" class="btn btn-custom btn-custom-outline mt-auto"><span
+                                        class="btn-text">Помочь ребенку расти!</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="divider-subtle" data-aos="fade-up" data-aos-delay="250"></div>
+            <div class="pt-4" data-aos="fade-up" data-aos-delay="250">
+                <h3 class="display-6 fw-semibold text-center mb-5">Откройте в Себе Талант Массажиста!</h3>
+                <div class="service-card mx-auto" style="max-width: 700px;" data-aos="zoom-in-up" data-aos-delay="300">
+                    <div class="service-card-img-wrapper">
+                        <img src="/static/img/webp/massage_cource.webp" class="service-card-img" alt="Обучение массажу" loading="lazy">
+                    </div>
+                    <div class="card-body text-center">
+                        <h4 class="card-title">Курсы Массажа от "Технологии Тела"</h4>
+                        <p class="card-subtitle-text">Для заботливых мам, ищущих новые навыки или хобби.</p>
+                        <p class="card-text-main">Результат: Ценные знания от профессионала с мед. образованием! Умение
+                            помогать близким. Сертификат.</p>
+                        <a href="#contact" class="btn btn-custom btn-custom-primary mt-3"><span class="btn-text">Да, я хочу научиться!</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section-padding section-bg-light-pink">
+        <div class="container">
+            <div class="row align-items-center g-4">
+                <div class="col-lg-6" data-aos="fade-right" data-aos-delay="150">
+                    <h2 class="display-5 section-title mb-4">Ваш Эксперт – "Технология Тела"</h2>
+                    <p class="fs-5 text-secondary mb-4">За каждым прикосновением – знания, опыт и искреннее желание
+                        помочь.</p>
+                    <div class="accordion" id="accordionAboutUnique">
+                        <div class="accordion-item" data-aos="fade-up" data-aos-delay="200">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button fs-5" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseAboutUniqueOne" aria-expanded="true">Медицинское
+                                    образование
+                                </button>
+                            </h2>
+                            <div id="collapseAboutUniqueOne" class="accordion-collapse collapse show"
+                                 data-bs-parent="#accordionAboutUnique">
+                                <div class="accordion-body">Профильное медицинское образование гарантирует глубокое
+                                    понимание анатомии и физиологии для безопасных и эффективных процедур.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item" data-aos="fade-up" data-aos-delay="250">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button fs-5 collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseAboutUniqueTwo">Опыт и Практика (3+ года)
+                                </button>
+                            </h2>
+                            <div id="collapseAboutUniqueTwo" class="accordion-collapse collapse"
+                                 data-bs-parent="#accordionAboutUnique">
+                                <div class="accordion-body">Сотни благодарных клиентов и индивидуальный подход к каждому
+                                    для достижения видимых результатов.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item" data-aos="fade-up" data-aos-delay="300">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button fs-5 collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseAboutUniqueThree">Мастерство Обучения
+                                </button>
+                            </h2>
+                            <div id="collapseAboutUniqueThree" class="accordion-collapse collapse"
+                                 data-bs-parent="#accordionAboutUnique">
+                                <div class="accordion-body">Мы не только практикуем, но и с удовольствием делимся
+                                    знаниями, обучая массажу доступно и эффективно.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-4 pt-3" data-aos="fade-up" data-aos-delay="350">
+                        <a href="#contact" class="btn btn-custom btn-custom-primary me-2"><span class="btn-text">Задать вопрос</span></a>
+                        <button onclick="alert('Здесь будет галерея сертификатов Технологии Тела')"
+                                class="btn btn-custom btn-custom-outline"><span class="btn-text">Наши сертификаты</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="col-lg-6 text-center" data-aos="fade-up" data-aos-delay="200">
+                    <img src="/static/img/webp/Anastasia.webp" class="img-fluid rounded-3 shadow-lg about-img" alt="Специалист Технологии Тела" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="section-padding">
+        <div class="container">
+            <h2 class="display-4 section-title text-center" data-aos="fade-up">Истории Реальных Преображений</h2>
+            <p class="section-subtitle text-center" data-aos="fade-up" data-aos-delay="100">Их улыбки и благодарность –
+                лучшая награда!</p>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="150">
+                    <div class="testimonial-card h-100 d-flex flex-column text-center">
+                        <img src="https://placehold.co/80x80/F7EAE7/3D3D3D?text=М.И."
+                             class="rounded-circle testimonial-img mx-auto mb-4" alt="Клиент Мария И.">
+                        <p class="fst-italic flex-grow-1 card-text">"...малыш наконец-то спит всю ночь! Это просто
+                            волшебство. Спасибо 'Технологии Тела'!"</p>
+                        <p class="fw-semibold mt-3 mb-0">- Мария И., мама Артема</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="testimonial-card h-100 d-flex flex-column text-center">
+                        <img src="https://placehold.co/80x80/F7EAE7/3D3D3D?text=Е.В."
+                             class="rounded-circle testimonial-img mx-auto mb-4" alt="Клиент Елена В.">
+                        <p class="fst-italic flex-grow-1 card-text">"...влезла в джинсы мечты после курса! Кожа просто
+                            супер. Настоящие профессионалы!"</p>
+                        <p class="fw-semibold mt-3 mb-0">- Елена В.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="250">
+                    <div class="testimonial-card h-100 d-flex flex-column text-center">
+                        <img src="https://placehold.co/80x80/F7EAE7/3D3D3D?text=О.С."
+                             class="rounded-circle testimonial-img mx-auto mb-4" alt="Ученица Ольга С.">
+                        <p class="fst-italic flex-grow-1 card-text">"...теперь я сама помогаю своей семье, это бесценно!
+                            Курс очень понятный. Спасибо за знания!"</p>
+                        <p class="fw-semibold mt-3 mb-0">- Ольга С., выпускница курса</p>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-5 pt-2" data-aos="fade-up" data-aos-delay="300">
+                <a href="https://www.instagram.com/tekhnologiya_tela" target="_blank" rel="noopener noreferrer"
+                   class="btn btn-lg btn-custom btn-custom-primary">
+                    <i class="bi bi-instagram me-2"></i> <span class="btn-text">Больше отзывов</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="how-it-works" class="section-padding section-bg-ultra-light">
+        <div class="container text-center">
+            <h2 class="display-4 section-title" data-aos="fade-up">Ваш Путь к Результату – Просто и Понятно</h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Всего несколько шагов отделяют вас от
+                желаемого результата:</p>
+            <div class="row g-lg-5 g-4 justify-content-center">
+                <div class="col-sm-6 col-lg-3 process-step" data-aos="fade-up" data-aos-delay="150">
+                    <div class="step-icon-wrapper"><i class="bi bi-chat-dots-fill"></i></div>
+                    <h4 class="mb-2">Ваша Заявка</h4>
+                    <p class="small text-secondary">Оставляете заявку на сайте или звоните. Мы оперативно
+                        связываемся.</p>
+                </div>
+                <div class="col-sm-6 col-lg-3 process-step" data-aos="fade-up" data-aos-delay="200">
+                    <div class="step-icon-wrapper"><i class="bi bi-person-check-fill"></i></div>
+                    <h4 class="mb-2">Консультация</h4>
+                    <p class="small text-secondary">Специалист выслушает вас, ответит на вопросы, поможет подобрать
+                        программу.</p>
+                </div>
+                <div class="col-sm-6 col-lg-3 process-step" data-aos="fade-up" data-aos-delay="250">
+                    <div class="step-icon-wrapper"><i class="bi bi-hand-thumbs-up-fill"></i></div>
+                    <h4 class="mb-2">Сеанс / Обучение</h4>
+                    <p class="small text-secondary">Наслаждаетесь массажем или погружаетесь в мир знаний на курсе.</p>
+                </div>
+                <div class="col-sm-6 col-lg-3 process-step" data-aos="fade-up" data-aos-delay="300">
+                    <div class="step-icon-wrapper"><i class="bi bi-award-fill"></i></div>
+                    <h4 class="mb-2">Результат!</h4>
+                    <p class="small text-secondary">Чувствуете изменения или с гордостью применяете новые навыки!</p>
+                </div>
+            </div>
+            <div class="text-center mt-5 pt-3" data-aos="fade-up" data-aos-delay="350">
+                <a href="#contact" class="btn btn-lg btn-custom btn-custom-outline">
+                    <span class="btn-text">Сделать первый шаг сейчас!</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing" class="section-padding">
+        <div class="container">
+            <h2 class="display-4 section-title text-center" data-aos="fade-up">Инвестиция в Себя – Самая Ценная!</h2>
+            <p class="section-subtitle text-center" data-aos="fade-up" data-aos-delay="100">Предлагаем честные цены за
+                высочайшее качество. Ваше здоровье, красота и новые навыки бесценны.</p>
+            <div class="row g-4 justify-content-center">
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="150">
+                    <div class="pricing-card h-100 d-flex flex-column">
+                        <div class="card-header text-center">
+                            <h3 class="mb-0">Женский Массаж</h3>
+                        </div>
+                        <div class="card-body p-4 flex-grow-1">
+                            <ul class="list-unstyled mb-4">
+                                <li class="mb-2 py-2"><strong>Скульптурирующий (60 мин):</strong> 2500 руб.</li>
+                                <li class="mb-2 py-2"><em>Курс 10 сеансов:</em> <span
+                                        class="price-original">25000</span> <span
+                                        class="price-highlight">22000 руб.</span></li>
+                                <li class="mb-2 py-2"><strong>Оздоровительный (60 мин):</strong> 2000 руб.</li>
+                                <li class="py-2"><em>Курс 5 сеансов:</em> <span class="price-original">10000</span>
+                                    <span class="price-highlight">9000 руб.</span></li>
+                            </ul>
+                        </div>
+                        <div class="card-footer p-4 bg-transparent border-0"><a href="#contact"
+                                                                                class="btn btn-custom btn-custom-primary w-100"><span
+                                class="btn-text">Записаться</span></a></div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="pricing-card h-100 d-flex flex-column">
+                        <div class="card-header text-center">
+                            <h3 class="mb-0">Детский Массаж</h3>
+                        </div>
+                        <div class="card-body p-4 flex-grow-1">
+                            <ul class="list-unstyled mb-4">
+                                <li class="mb-2 py-2"><strong>Грудничковый + ЛФК (45 мин):</strong> 1800 руб.</li>
+                                <li class="mb-2 py-2"><em>Курс 10 сеансов:</em> <span
+                                        class="price-original">18000</span> <span
+                                        class="price-highlight">16000 руб.</span></li>
+                                <li class="mb-2 py-2"><strong>Развивающий (1-7 лет, 45 мин):</strong> 1600 руб.</li>
+                                <li class="mb-2 py-2"><em>Курс 10 сеансов:</em> <span
+                                        class="price-original">16000</span> <span
+                                        class="price-highlight">14500 руб.</span></li>
+                                <li class="py-2"><strong>Выезд на дом:</strong> +300-500 руб.</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer p-4 bg-transparent border-0"><a href="#contact"
+                                                                                class="btn btn-custom btn-custom-outline w-100"><span
+                                class="btn-text">Записать ребенка</span></a></div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="250">
+                    <div class="pricing-card h-100 d-flex flex-column">
+                        <div class="card-header text-center">
+                            <h3 class="mb-0">Обучение Массажу</h3>
+                        </div>
+                        <div class="card-body p-4 flex-grow-1">
+                            <ul class="list-unstyled mb-4">
+                                <li class="mb-2 py-2"><strong>Курс "Детский массаж для мам":</strong> 15000 руб.</li>
+                                <li class="mb-2 py-2"><strong>Курс "Основы классического массажа":</strong> 20000 руб.
+                                </li>
+                                <li class="py-2"><em>Индивидуальное обучение:</em> от 3000 руб./час</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer p-4 bg-transparent border-0"><a href="#contact"
+                                                                                class="btn btn-custom btn-custom-primary w-100"><span
+                                class="btn-text">Узнать о курсах</span></a></div>
+                    </div>
+                </div>
+            </div>
+            <p class="text-center mt-4 pt-2 text-secondary" data-aos="fade-up" data-aos-delay="300"><small>Точную
+                стоимость и наличие специальных предложений уточняйте при консультации.</small></p>
+        </div>
+    </section>
+
+    <section id="faq" class="section-padding section-bg-light-pink faq-section">
+        <div class="container" style="max-width: 800px;">
+            <h2 class="display-4 section-title text-center" data-aos="fade-up">Часто Задаваемые Вопросы</h2>
+            <p class="section-subtitle text-center" data-aos="fade-up" data-aos-delay="100">Всё, что вы хотели знать, но
+                стеснялись спросить:</p>
+            <div class="accordion" id="faqAccordionUnique">
+                <div class="accordion-item" data-aos="fade-up" data-aos-delay="150">
+                    <h2 class="accordion-header" id="faqH1">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faqC1" aria-expanded="false" aria-controls="faqC1">Больно ли делать
+                            антицеллюлитный массаж?
+                        </button>
+                    </h2>
+                    <div id="faqC1" class="accordion-collapse collapse" aria-labelledby="faqH1"
+                         data-bs-parent="#faqAccordionUnique">
+                        <div class="accordion-body">Ощущения могут быть интенсивными, но специалист всегда подбирает
+                            комфортную для вас степень воздействия. Результат того стоит!
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item" data-aos="fade-up" data-aos-delay="200">
+                    <h2 class="accordion-header" id="faqH2">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faqC2" aria-expanded="false" aria-controls="faqC2">С какого возраста
+                            можно приводить ребенка на массаж?
+                        </button>
+                    </h2>
+                    <div id="faqC2" class="accordion-collapse collapse" aria-labelledby="faqH2"
+                         data-bs-parent="#faqAccordionUnique">
+                        <div class="accordion-body">Общеукрепляющий массаж и ЛФК для грудничков можно начинать с 1.5-2
+                            месяцев после консультации с педиатром.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item" data-aos="fade-up" data-aos-delay="250">
+                    <h2 class="accordion-header" id="faqH3">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faqC3" aria-expanded="false" aria-controls="faqC3">Какие документы я
+                            получу после обучения?
+                        </button>
+                    </h2>
+                    <div id="faqC3" class="accordion-collapse collapse" aria-labelledby="faqH3"
+                         data-bs-parent="#faqAccordionUnique">
+                        <div class="accordion-body">По окончании курсов выдается сертификат, подтверждающий ваши знания
+                            и навыки. (Детали уточняйте).
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-5 pt-2" data-aos="fade-up" data-aos-delay="300">
+                <a href="#contact" class="btn btn-lg btn-custom btn-custom-outline">
+                    <span class="btn-text">Не нашли ответ? Задайте свой вопрос!</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section-padding contact-form-section text-light">
+        <div class="container text-center">
+            <h2 class="display-3 fw-bold mb-4 text-white" data-aos="fade-up">Время Действовать!</h2>
+            <p class="fs-4 mb-5 mx-auto" style="max-width: 700px;" data-aos="fade-up" data-aos-delay="100">Сделайте шаг
+                к здоровью и красоте ПРЯМО СЕЙЧАС! "Технология Тела" готова помочь вам.</p>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-8 col-xl-7" data-aos="zoom-in" data-aos-delay="150">
+                    <div class="p-4 p-sm-5 rounded-3 shadow-lg" style="background-color: rgba(255,255,255,0.05);">
+                        <h3 class="fs-2 fw-bold mb-4 text-white">Оставьте заявку</h3>
+                        <form action="mailto:info@tekhnologiyatela.ru?subject=Заявка с сайта Технология Тела"
+                              method="post" enctype="text/plain">
+                            <div class="mb-3">
+                                <input type="text" name="name" id="contactNameUniqueV2" required class="form-control"
+                                       placeholder="Ваше имя">
+                            </div>
+                            <div class="mb-3">
+                                <input type="tel" name="phone" id="contactPhoneUniqueV2" required class="form-control"
+                                       placeholder="+7 (988) XXX-XX-XX">
+                            </div>
+                            <div class="mb-3">
+                                <select id="contactServiceUniqueV2" name="service" class="form-select">
+                                    <option selected disabled value="">Выберите услугу/курс...</option>
+                                    <option>Консультация</option>
+                                    <option>Женский массаж (Эстетический)</option>
+                                    <option>Женский массаж (Оздоровительный)</option>
+                                    <option>Детский массаж (Грудничковый)</option>
+                                    <option>Детский массаж (1-7 лет)</option>
+                                    <option>Обучение: Курс "Детский массаж для мам"</option>
+                                    <option>Обучение: Курс "Основы классического массажа"</option>
+                                    <option>Другое (укажу в комментарии)</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <textarea id="contactCommentUniqueV2" name="comment" rows="4" class="form-control"
+                                          placeholder="Ваши пожелания или вопросы (необязательно)"></textarea>
+                            </div>
+                            <div class="form-check text-start mb-4">
+                                <input class="form-check-input" type="checkbox" value="" id="dataConsentCheck" required>
+                                <label class="form-check-label" for="dataConsentCheck">
+                                    Я даю согласие на обработку персональных данных и принимаю <a href="#"
+                                                                                                  data-bs-toggle="modal"
+                                                                                                  data-bs-target="#privacyPolicyModal">Политику
+                                    конфиденциальности</a>.
+                                </label>
+                            </div>
+                            <button type="submit" class="btn btn-lg btn-custom btn-custom-primary w-100">
+                                <span class="btn-text">Отправить заявку!</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-5 pt-4 contact-icons" data-aos="fade-up" data-aos-delay="200">
+                <p class="fs-4 fw-semibold mb-3">Или свяжитесь напрямую:</p>
+                <p class="display-5 fw-bold mb-3"><a href="tel:+79880935405" class="text-white hover:text-light"><i
+                        class="bi bi-telephone-fill me-2"></i>+7 (988) 093-54-05</a></p>
+                <div class="my-4">
+                    <a href="https://wa.me/79991234567" target="_blank" class="mx-3" aria-label="WhatsApp"><i
+                            class="bi bi-whatsapp"></i></a>
+                    <a href="https://t.me/tekhnologiyatela_user" target="_blank" class="mx-3" aria-label="Telegram"><i
+                            class="bi bi-telegram"></i></a>
+                    <a href="https://www.instagram.com/tekhnologiya_tela" target="_blank" rel="noopener noreferrer"
+                       class="mx-3" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                </div>
+                <p class="mb-1"><i class="bi bi-geo-alt-fill me-2"></i>г. Минеральные Воды, ул. Примерная, д.1 (Точный
+                    адрес уточняйте)</p>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="py-5 footer">
+    <div class="container text-center">
+        <ul class="list-inline mb-3">
+            <li class="list-inline-item mx-2"><a href="#hero">Главная</a></li>
+            <li class="list-inline-item mx-2"><a href="#services">Услуги</a></li>
+            <li class="list-inline-item mx-2"><a href="#about">О нас</a></li>
+            <li class="list-inline-item mx-2"><a href="#pricing">Цены</a></li>
+            <li class="list-inline-item mx-2"><a href="#contact">Контакты</a></li>
+        </ul>
+        <p class="mb-0"><small>&copy; <span id="currentYearV2"></span> Технология Тела. Все права защищены.</small></p>
+    </div>
+</footer>
+
+<a href="#contact" id="fixedCtaBtnV2" title="Записаться" class="btn-fixed-cta">
+    <i class="bi bi-calendar2-plus cta-icon"></i>
+    <span class="cta-text-tooltip">Запись</span>
+</a>
+
+<div id="preloader">
+    <div class="spinner-border" role="status">
+        <span class="visually-hidden">Загрузка...</span>
+    </div>
+</div>
+
+<div class="modal fade" id="privacyPolicyModal" tabindex="-1" aria-labelledby="privacyPolicyModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title fs-4" id="privacyPolicyModalLabel">Политика конфиденциальности</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p><strong>1. Общие положения</strong></p>
+                <p>Настоящая политика обработки персональных данных составлена в соответствии с требованиями
+                    Федерального закона от 27.07.2006. №152-ФЗ «О персональных данных» и определяет порядок обработки
+                    персональных данных и меры по обеспечению безопасности персональных данных, предпринимаемые ИП
+                    "Технология Тела" (далее – Оператор).</p>
+                <p>1.1. Оператор ставит своей важнейшей целью и условием осуществления своей деятельности соблюдение
+                    прав и свобод человека и гражданина при обработке его персональных данных, в том числе защиты прав
+                    на неприкосновенность частной жизни, личную и семейную тайну.</p>
+                <p>1.2. Настоящая политика Оператора в отношении обработки персональных данных (далее – Политика)
+                    применяется ко всей информации, которую Оператор может получить о посетителях веб-сайта.</p>
+                <p><strong>2. Основные понятия, используемые в Политике</strong></p>
+                <p>2.1. Автоматизированная обработка персональных данных – обработка персональных данных с помощью
+                    средств вычислительной техники...</p>
+                <p class="my-3">[...] Здесь должен быть полный текст вашей политики конфиденциальности. Этот текст
+                    является ЗАПОЛНИТЕЛЕМ. Убедитесь, что вы заменили его актуальным текстом, соответствующим
+                    законодательству.</p>
+                <p><strong>3. Оператор может обрабатывать следующие персональные данные Пользователя</strong></p>
+                <p>3.1. Фамилия, имя, отчество;</p>
+                <p>3.2. Номер телефона;</p>
+                <p>3.3. Адрес электронной почты (если собирается);</p>
+                <p>3.4. Также на сайте происходит сбор и обработка обезличенных данных о посетителях (в т.ч. файлов
+                    «cookie») с помощью сервисов интернет-статистики (Яндекс Метрика и Гугл Аналитика и других).</p>
+                <p class="my-3">[...]</p>
+                <p><strong>8. Заключительные положения</strong></p>
+                <p>8.1. Пользователь может получить любые разъяснения по интересующим вопросам, касающимся обработки его
+                    персональных данных, обратившись к Оператору с помощью электронной почты
+                    info@tekhnologiyatela.ru.</p>
+                <p>8.2. В данном документе будут отражены любые изменения политики обработки персональных данных
+                    Оператором. Политика действует бессрочно до замены ее новой версией.</p>
+                <p>8.3. Актуальная версия Политики в свободном доступе расположена в сети Интернет по адресу [ссылка на
+                    политику, если она будет размещена отдельно, или указать, что предоставляется по запросу].</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-custom btn-custom-outline" data-bs-dismiss="modal"><span
+                        class="btn-text">Закрыть</span></button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        xintegrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init({
+        duration: 600, /* Faster animations */
+        once: true,
+        offset: 40, /* Trigger animations a bit sooner */
+        easing: 'ease-out-cubic',
+    });
+    window.addEventListener('load', function () {
+        const preloader = document.getElementById('preloader');
+        if (preloader) {
+            preloader.classList.add('hidden');
+
+            preloader.addEventListener('transitionend', function() {
+                preloader.remove();
+            });
+        }
+    });
+
+    document.getElementById('currentYearV2').textContent = new Date().getFullYear();
+
+    const mainNav = document.body.querySelector('#navbar');
+    let scrollSpyOffset = 80;
+    if (mainNav) {
+        const updateScrollSpyOffset = () => {
+            scrollSpyOffset = mainNav.offsetHeight > 0 ? mainNav.offsetHeight + 10 : 85; // Adjusted offset
+        };
+        updateScrollSpyOffset();
+        window.addEventListener('resize', updateScrollSpyOffset);
+
+        new bootstrap.ScrollSpy(document.body, {
+            target: '#navbar',
+            offset: scrollSpyOffset,
+        });
+    }
+
+    const navLinks = document.querySelectorAll('#navbarNav .nav-link');
+    const navbarCollapseEl = document.getElementById('navbarNav');
+    const bsNavbarCollapse = navbarCollapseEl ? new bootstrap.Collapse(navbarCollapseEl, {toggle: false}) : null;
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            if (bsNavbarCollapse && navbarCollapseEl.classList.contains('show')) {
+                bsNavbarCollapse.hide();
+            }
+        });
+    });
+
+    const fixedCtaBtn = document.getElementById('fixedCtaBtnV2');
+    if (fixedCtaBtn) {
+        window.addEventListener('scroll', function () {
+            if (window.pageYOffset > 700) { // Show button after more scroll
+                fixedCtaBtn.classList.add('show');
+            } else {
+                fixedCtaBtn.classList.remove('show');
+            }
+        }, false);
+    }
+
+</script>
 </body>
 </html>

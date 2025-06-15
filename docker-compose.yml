@@ -39,6 +39,7 @@ services:
       - vhost_volume:/etc/nginx/vhost.d
       - html_volume:/usr/share/nginx/html
       - /var/run/docker.sock:/tmp/docker.sock:ro
+      - ./web/src/static:/web/src/static:ro
     ports:
       - "80:80"
       - "443:443"

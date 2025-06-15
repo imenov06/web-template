@@ -60,7 +60,7 @@ app.add_middleware(ProxyMiddleware)
 app.state.bot = bot
 app.state.dp = dp
 
-app.mount("/static", StaticFiles(directory="src/static"), name="static")
+# app.mount("/static", StaticFiles(directory="src/static"), name="static")
 init_admin(app=app)
 
 app.include_router(webhook_router.router)
