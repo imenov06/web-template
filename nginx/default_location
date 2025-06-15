@@ -1,3 +1,3 @@
 location /static/ {
-    alias /web/static/;
+    alias /web/src/static/;
 }
